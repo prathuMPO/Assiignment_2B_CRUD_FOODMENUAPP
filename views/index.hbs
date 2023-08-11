@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>{{title}}</h1>
+<p>Welcome to {{title}}</p>
+
+<form action="/menu/new" method="POST">
+        <p><input type="text" name="menuName" id="" placeholder="Name"></p>
+        <p><input type="text" name="menuIcon" id="" placeholder="Icon URL [http]"></p>
+        <p><input type="text" name="menuUrl" id="" placeholder="Menu URL [http]"></p>
+        <p><button type="submit">Save</button></p>
+    </form>
+
+ {{#if data}}
+  {{#each data}}
+    <img src="{{ icon }}"> {{ name }} {{ menuUrl }}
+  {{/each}}
+{{/if}}
+
+
+</body>
+</html>
